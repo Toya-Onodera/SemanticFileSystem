@@ -10,19 +10,21 @@
   
   
 ### DB について
-FileName テーブル（アップロードしたファイルを格納するDB）
+Rails だと Model 作成時に必要なくなるカラムもあるだろうけど一応記述  
+
+FileName テーブル（アップロードしたファイルを格納するテーブル）
 
 * id - INT primary key auto_increment
 * name - VARCHAR(255) not null
 * file - binary not null
 * description - TEXT
   
-TAG テーブル（）
+TAG テーブル（タグ名を保存するテーブル）
 
 * id - INT primary key auto_increment
-* name - TEXT
+* name - VARCHAR(255) not null
   
-Tag_Map テーブル（）
+Tag_Map テーブル（ファイルとタグを結びつけるテーブル）
 
 * id - INT primary key auto_increment
 * name_id - int not null
