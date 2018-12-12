@@ -18,12 +18,17 @@ FileName テーブル（アップロードしたファイルを格納するテ�
 * name - VARCHAR(255) not null
 * file - binary not null
 * description - TEXT
-  
+
 TAG テーブル（タグ名を保存するテーブル）
 
 * id - INT primary key auto_increment
 * name - VARCHAR(255) not null
-  
+
+Author テーブル
+
+* id - INT primary key auto_increment
+* name - VARCHAR(255) not null
+
 Tag_Map テーブル（ファイルとタグを結びつけるテーブル）
 
 * id - INT primary key auto_increment
@@ -40,18 +45,26 @@ FileName テーブル
 | 3 | CCC.docx | バイナリファイル | 来年の農法についての改善案 |
 | 4 | DDD.docx | バイナリファイル | 20XXMMDD_定例会議_議事録 |
 | 5 | EEE.pdf | バイナリファイル | 20XXMMDD_ポスター |
-  
+
 TAG テーブル
-  
+
 | id | name |
 |:-------:|:--------|
 | 1 | 事務作業 |
 | 2 | 広報 |
 | 3 | 農業 |
 | 4 | その他 |
-  
+
+Author テーブル
+
+| id | name |
+|:-------:|:--------|
+| 1 | ダミー |
+| 2 | ダミー |
+| 3 | ダミー |
+
 Tag_Map テーブル
-  
+
 | id | name_id | tag_id |
 |:-------:|:--------|:--------|
 | 1 | 1 | 4 |
@@ -59,3 +72,31 @@ Tag_Map テーブル
 | 3 | 3 | 1 |
 | 4 | 4 | 1 |
 | 5 | 5 | 2 |
+
+#### クライアントについて
+ブラウザで表示される部分  
+`/`  
+簡易的なトップページ  
+ログイン機能も実装できると良い  
+  
+`/upload`  
+ファイルをアップロードするページ  
+POST で送信かな？
+  
+`/search`  
+ファイルの検索を行うページ  
+AND 検索と OR 検索に対応する  
+キーワードは、なんでもOKで製作者やファイル名が対象になる  
+  
+`/search/{:id}`  
+1件1件を検索する機能
+
+`/delete`  
+ファイルの削除を行う機能
+削除後にページが表示される
+  
+APIとして提供する部分
+`/api/upload`  
+`/api/search`  
+`/api/search/{:id}`
+`/api/delete`
