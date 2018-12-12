@@ -95,8 +95,8 @@ AND 検索と OR 検索に対応する
 ファイルの削除を行う機能
 削除後にページが表示される
   
-APIとして提供する部分
+APIとして提供する部分  
 `/api/upload`  
 `/api/search`  
-`/api/search/{:id}`
+`/api/search/{:id}`  
 `/api/delete`
