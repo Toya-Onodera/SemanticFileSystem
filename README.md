@@ -65,7 +65,7 @@ Author テーブル
 
 Tag_Map テーブル
 
-| id | name_id | tag_id |
+| file_name_id | name_id | tag_id |
 |:-------:|:--------|:--------|
 | 1 | 1 | 4 |
 | 2 | 2 | 3 |
