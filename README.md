@@ -75,23 +75,23 @@ Tag_Map テーブル
 
 #### クライアントについて
 ブラウザで表示される部分  
-`/`  
+`/fileSystem/`  
 簡易的なトップページ  
 ログイン機能も実装できると良い  
   
-`/upload`  
+`/fileSystem/upload`  
 ファイルをアップロードするページ  
 POST で送信かな？
   
-`/search`  
+`/fileSystem/search`  
 ファイルの検索を行うページ  
 AND 検索と OR 検索に対応する  
 キーワードは、なんでもOKで製作者やファイル名が対象になる  
   
-`/search/{:id}`  
+`/fileSystem/search/{:id}`  
 1件1件を検索する機能
 
-`/delete`  
+`/fileSystem/delete`  
 ファイルの削除を行う機能
 削除後にページが表示される
   
