@@ -3,12 +3,15 @@ module Api
 
     VERSION = '0.0.1'
 
-    class FilesController < ApplicationController
+    class SfsController < ApplicationController
 
       # ファイル一覧 API
       # システムにアップロードされている条件に一致するファイル情報のデータを返す
       # パラメータによって LIKE 検索も可能
       def index
+        @files = FileName.all.order(created_at: 'desc')
+
+        render json: @files
       end
 
       # ファイルアップロード API

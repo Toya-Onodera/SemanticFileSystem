@@ -3,21 +3,21 @@ Rails.application.routes.draw do
 
 
   ### Files View ###
-  namespace :files do
-    get     '/files'         =>    'files#index'
-    get     '/files/new'     =>    'files#new'
-    post    '/files'         =>    'files#create'
-    get     '/files/:id'   =>    'files#show'
-    delete  '/files/:id'     =>    'files#destroy'
+  namespace :client do
+    get     '/files/'         =>    'files#index'
+    get     '/files/new'      =>    'files#new'
+    post    '/files/'         =>    'files#create'
+    get     '/files/:id'      =>    'files#show'
+    delete  '/files/:id'      =>    'files#destroy'
   end
 
   ### API ###
   namespace :api do
     namespace :v1 do
-      get     '/sfs'         =>    'sfs#index'
-      post    '/sfs'         =>    'sfs#create'
-      get     '/sfs/:id'   =>    'sfs#show'
-      delete  '/sfs/:id'     =>    'sfs#destroy'
+      get     '/sfs'     =>    'sfs#index'
+      post    '/sfs'     =>    'sfs#create'
+      get     '/sfs/:id' =>    'sfs#show'
+      delete  '/sfs/:id' =>    'sfs#destroy'
     end
   end
 end
